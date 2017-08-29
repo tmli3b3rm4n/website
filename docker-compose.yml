@@ -1,4 +1,4 @@
-pplication:
+application:
     build: src
     volumes:
         - /var/www/symfony:/var/www/symfony
@@ -16,7 +16,7 @@ db:
         - /var/lib/mysql:/var/lib/mysql
         - /var/log/mysql:/var/log/mysql
 php:
-    build: php-fpm
+    build: app
     expose:
         - 9000/http
     volumes_from:
