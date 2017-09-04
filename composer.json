@@ -1,11 +1,11 @@
 {
-    "name": "tim/socialexchange",
-    "license": "proprietary",
+    "name": "drgomesp/symfony-docker",
+    "description": "The Symfony Docker Edition, featuring Docker and Docker Compose – by Daniel Ribeiro",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle",
-            "UserBundle\\" : "src/UserBundle"
+            "": "src/"
         },
         "classmap": [
             "app/AppKernel.php",
@@ -15,24 +15,23 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        },
-        "files": [
-            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
-        ]
+        }
     },
+    "minimum-stability": "stable",
     "require": {
-        "php": ">=5.5.9",
-        "doctrine/doctrine-bundle": "^1.6",
+        "php": ">=7.0",
+        "symfony/symfony": "3.2.*",
         "doctrine/orm": "^2.5",
-        "friendsofsymfony/user-bundle": "^2.0",
-        "incenteev/composer-parameter-handler": "^2.0",
-        "sensio/distribution-bundle": "^5.0.19",
-        "sensio/framework-extra-bundle": "^3.0.2",
-        "symfony/monolog-bundle": "^3.1.0",
-        "symfony/polyfill-apcu": "^1.0",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
         "symfony/swiftmailer-bundle": "^2.3.10",
-        "symfony/symfony": "3.3.*",
-        "twig/twig": "^1.0||^2.0"
+        "symfony/monolog-bundle": "^3.0.2",
+        "symfony/polyfill-apcu": "^1.0",
+        "sensio/distribution-bundle": "^5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "twig/twig": "^1.0||^2.0",
+        "drgomesp/symfony-docker": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -53,9 +52,6 @@
         "post-update-cmd": [
             "@symfony-scripts"
         ]
-    },
-    "config": {
-        "sort-packages": true
     },
     "extra": {
         "symfony-app-dir": "app",
